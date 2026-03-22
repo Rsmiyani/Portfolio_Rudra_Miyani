@@ -21,6 +21,9 @@ body {
     overflow-x: hidden;
     cursor: none;
     /* Custom cursor */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
 }
 
 a,

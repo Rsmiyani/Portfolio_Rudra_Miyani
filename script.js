@@ -602,3 +602,38 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
     setTimeout(() => { ScrollTrigger.refresh(); }, 500);
 });
+
+// --- Security Features: Prevent Inspect & Text Selection ---
+
+// 1. Prevent Right-Click Context Menu
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+// 2. Prevent Keyboard Shortcuts for Developer Tools
+document.addEventListener('keydown', function (e) {
+    // Prevent F12
+    if (e.key === 'F12' || e.keyCode === 123) {
+        e.preventDefault();
+    }
+    // Prevent Ctrl+Shift+I (Inspect)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+        e.preventDefault();
+    }
+    // Prevent Ctrl+Shift+C (Inspect Element)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'c')) {
+        e.preventDefault();
+    }
+    // Prevent Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j')) {
+        e.preventDefault();
+    }
+    // Prevent Ctrl+U (View Source)
+    if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+        e.preventDefault();
+    }
+    // Prevent Cmd+Option+I/J/U (Mac shortcuts)
+    if (e.metaKey && e.altKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'U' || e.key === 'u')) {
+        e.preventDefault();
+    }
+});
