@@ -1,5 +1,7 @@
 ﻿# Modern OS-Style Developer Portfolio 🚀
 
+**🌍 Live Preview:** [rudramiyani.vercel.app](https://rudramiyani.vercel.app/)
+
 Welcome to the **OS-Style Developer Portfolio**! Originally built as my personal portfolio, I have decided to open-source this project so that any developer can use, customize, and make it their own. It features a unique, interactive terminal-like boot sequence animation before revealing a sleek, modern portfolio interface.
 
 ## 🌟 Features
